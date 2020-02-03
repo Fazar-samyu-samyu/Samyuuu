@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package player;
+
+/**
+ *
+ * @author Takusa
+ */
+public class player {
+    String nama;
+    int speed;
+    int hp;
+    
+    public void Srun(){
+    	System.out.println(this.nama + "Mulai berlari...");
+    }
+    
+    public void run(){
+        System.out.println("Sedang berlari...");
+    }
+    public void isDead(){
+        if  (hp <=1){
+            System.out.println("Dan Akhirnya Capek, lalu tidur..");
+        }else {
+            System.out.println("Dan Terus berlari...");
+        }
+    }
+    
+    public void minum(){
+    	hp=+3; //sama dengan hp=hp+3
+    	System.out.println(this.nama + "Karena istirahat, jadi minum");
+    }
+    
+    public void isRest(){
+        if(this.hp == 1){
+            System.out.println("Sedang istirahat ");
+            
+            
+        }else { 
+            System.out.println("Masih berlari...");
+            hp = hp-2; 
+        }
+    }
+    public static void main(String[]args){
+        player asep =new player();
+        asep.nama = "asepted in inglis" ;
+        asep.speed = 10;
+        asep.hp = 5;
+        
+        asep.Srun();
+        asep.run();
+        asep.isRest();
+        asep.isRest();
+        asep.isRest();
+        asep.minum();
+        asep.Srun();
+        asep.run();
+        asep.isRest();
+        asep.isDead();
+        
+    }
+}
